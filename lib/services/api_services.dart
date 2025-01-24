@@ -7,8 +7,8 @@ import 'package:http/http.dart' as http;
 class ApiServices {
   Future<List<CurrencyModel>> getLatest(String baseCurrency) async {
     List<CurrencyModel> currencyModelList = [];
-    String apiKey = api_key;
-    String url = '${base_url}apikey=$apiKey&base_currency=$baseCurrency';
+    String apikey = api_Key;
+    String url = '${base_url}apikey=$apikey&base_currency=$baseCurrency';
 
     try {
       final response = await http.get(Uri.parse(url));

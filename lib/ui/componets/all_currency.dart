@@ -8,10 +8,21 @@ class AllCurrency extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: const EdgeInsets.all(8),
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(10),
+        color: Colors.blue.withAlpha(88),
+      ),
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(
             currencyModel.code.toString(),
+            style: const TextStyle(color: Colors.white, fontSize: 18),
+          ),
+          Text(
+            currencyModel.value?.toStringAsFixed(2).toString() ?? "",
             style: const TextStyle(color: Colors.white, fontSize: 18),
           ),
         ],
