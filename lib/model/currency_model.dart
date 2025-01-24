@@ -10,9 +10,9 @@ class CurrencyModel {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['code'] = this.code;
-    data['value'] = this.value;
+    final Map<String, dynamic> data = Map<String, dynamic>();
+    data['code'] = code;
+    data['value'] = value;
     return data;
   }
 }
